@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141159EDA9F0B6313E169B4D /* Pods_COBSCComp201P001_Eshan_COBSCComp201P001_EshanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6FC3FAA1DEF4707A83CA49 /* Pods_COBSCComp201P001_Eshan_COBSCComp201P001_EshanUITests.framework */; };
+		3F7A78024DC9A04783EF2F12 /* Pods_COBSCComp201P001_EshanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532BADE0715F82874672BBC /* Pods_COBSCComp201P001_EshanTests.framework */; };
+		BEFD61ADEBDE4ECBC88A78B6 /* Pods_COBSCComp201P001_Eshan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F74A3840B8432DF14A103 /* Pods_COBSCComp201P001_Eshan.framework */; };
+		CF089FD427281E05005ABF95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF089FD327281E05005ABF95 /* GoogleService-Info.plist */; };
 		CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */; };
 		CFF5B97E27283E5C00381B07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97D27283E5C00381B07 /* ContentView.swift */; };
 		CFF5B98027283E5E00381B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF5B97F27283E5E00381B07 /* Assets.xcassets */; };
@@ -34,7 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CFF5B97827283E5C00381B07 /* COBSCComp201P001-Eshan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COBSCComp201P001-Eshan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1532BADE0715F82874672BBC /* Pods_COBSCComp201P001_EshanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COBSCComp201P001_EshanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F29331758EF17F216F4237C /* Pods-COBSCComp201P001-EshanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-EshanTests.debug.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-EshanTests/Pods-COBSCComp201P001-EshanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		534F74A3840B8432DF14A103 /* Pods_COBSCComp201P001_Eshan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COBSCComp201P001_Eshan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A6FC3FAA1DEF4707A83CA49 /* Pods_COBSCComp201P001_Eshan_COBSCComp201P001_EshanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COBSCComp201P001_Eshan_COBSCComp201P001_EshanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82A04A7D9C4AE4F6A1B17044 /* Pods-COBSCComp201P001-EshanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-EshanTests.release.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-EshanTests/Pods-COBSCComp201P001-EshanTests.release.xcconfig"; sourceTree = "<group>"; };
+		8AB59BCAC8C731A36DBF95A0 /* Pods-COBSCComp201P001-Eshan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan.release.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan/Pods-COBSCComp201P001-Eshan.release.xcconfig"; sourceTree = "<group>"; };
+		CC69B644A47A4B8ABB4C1C69 /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCE9B431402B642E96930608 /* Pods-COBSCComp201P001-Eshan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan.debug.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan/Pods-COBSCComp201P001-Eshan.debug.xcconfig"; sourceTree = "<group>"; };
+		CF089FD327281E05005ABF95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFF5B97827283E5C00381B07 /* NIBM Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COBSCComp201P001_EshanApp.swift; sourceTree = "<group>"; };
 		CFF5B97D27283E5C00381B07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFF5B97F27283E5E00381B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +57,7 @@
 		CFF5B99227283E5E00381B07 /* COBSCComp201P001-EshanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "COBSCComp201P001-EshanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF5B99627283E5E00381B07 /* COBSCComp201P001_EshanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COBSCComp201P001_EshanUITests.swift; sourceTree = "<group>"; };
 		CFF5B99827283E5E00381B07 /* COBSCComp201P001_EshanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COBSCComp201P001_EshanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0787AE2EB1740CF1A53B93A /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.release.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFD61ADEBDE4ECBC88A78B6 /* Pods_COBSCComp201P001_Eshan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7A78024DC9A04783EF2F12 /* Pods_COBSCComp201P001_EshanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +81,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141159EDA9F0B6313E169B4D /* Pods_COBSCComp201P001_Eshan_COBSCComp201P001_EshanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070BEEF9A6574E9E42C33B18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				534F74A3840B8432DF14A103 /* Pods_COBSCComp201P001_Eshan.framework */,
+				6A6FC3FAA1DEF4707A83CA49 /* Pods_COBSCComp201P001_Eshan_COBSCComp201P001_EshanUITests.framework */,
+				1532BADE0715F82874672BBC /* Pods_COBSCComp201P001_EshanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CFF5B96F27283E5C00381B07 = {
 			isa = PBXGroup;
 			children = (
@@ -78,13 +105,15 @@
 				CFF5B98B27283E5E00381B07 /* COBSCComp201P001-EshanTests */,
 				CFF5B99527283E5E00381B07 /* COBSCComp201P001-EshanUITests */,
 				CFF5B97927283E5C00381B07 /* Products */,
+				D5FF36EADEA8E0996ED98871 /* Pods */,
+				070BEEF9A6574E9E42C33B18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CFF5B97927283E5C00381B07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CFF5B97827283E5C00381B07 /* COBSCComp201P001-Eshan.app */,
+				CFF5B97827283E5C00381B07 /* NIBM Parking.app */,
 				CFF5B98827283E5E00381B07 /* COBSCComp201P001-EshanTests.xctest */,
 				CFF5B99227283E5E00381B07 /* COBSCComp201P001-EshanUITests.xctest */,
 			);
@@ -96,6 +125,7 @@
 			children = (
 				CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */,
 				CFF5B97D27283E5C00381B07 /* ContentView.swift */,
+				CF089FD327281E05005ABF95 /* GoogleService-Info.plist */,
 				CFF5B97F27283E5E00381B07 /* Assets.xcassets */,
 				CFF5B98127283E5E00381B07 /* Preview Content */,
 			);
@@ -127,6 +157,19 @@
 			path = "COBSCComp201P001-EshanUITests";
 			sourceTree = "<group>";
 		};
+		D5FF36EADEA8E0996ED98871 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCE9B431402B642E96930608 /* Pods-COBSCComp201P001-Eshan.debug.xcconfig */,
+				8AB59BCAC8C731A36DBF95A0 /* Pods-COBSCComp201P001-Eshan.release.xcconfig */,
+				CC69B644A47A4B8ABB4C1C69 /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig */,
+				F0787AE2EB1740CF1A53B93A /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.release.xcconfig */,
+				2F29331758EF17F216F4237C /* Pods-COBSCComp201P001-EshanTests.debug.xcconfig */,
+				82A04A7D9C4AE4F6A1B17044 /* Pods-COBSCComp201P001-EshanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFF5B99C27283E5E00381B07 /* Build configuration list for PBXNativeTarget "COBSCComp201P001-Eshan" */;
 			buildPhases = (
+				4EEAE27C7BD61425695DE198 /* [CP] Check Pods Manifest.lock */,
 				CFF5B97427283E5C00381B07 /* Sources */,
 				CFF5B97527283E5C00381B07 /* Frameworks */,
 				CFF5B97627283E5C00381B07 /* Resources */,
+				29A1DFD052C72E3688CAE6C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,13 +189,14 @@
 			);
 			name = "COBSCComp201P001-Eshan";
 			productName = "COBSCComp201P001-Eshan";
-			productReference = CFF5B97827283E5C00381B07 /* COBSCComp201P001-Eshan.app */;
+			productReference = CFF5B97827283E5C00381B07 /* NIBM Parking.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CFF5B98727283E5E00381B07 /* COBSCComp201P001-EshanTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFF5B99F27283E5E00381B07 /* Build configuration list for PBXNativeTarget "COBSCComp201P001-EshanTests" */;
 			buildPhases = (
+				DC2D29406B984CAE7CDA9F51 /* [CP] Check Pods Manifest.lock */,
 				CFF5B98427283E5E00381B07 /* Sources */,
 				CFF5B98527283E5E00381B07 /* Frameworks */,
 				CFF5B98627283E5E00381B07 /* Resources */,
@@ -169,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFF5B9A227283E5E00381B07 /* Build configuration list for PBXNativeTarget "COBSCComp201P001-EshanUITests" */;
 			buildPhases = (
+				E4F06A0836365DF2CF5EC938 /* [CP] Check Pods Manifest.lock */,
 				CFF5B98E27283E5E00381B07 /* Sources */,
 				CFF5B98F27283E5E00381B07 /* Frameworks */,
 				CFF5B99027283E5E00381B07 /* Resources */,
+				7F76F3FD2AFCADC1C463A58B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +281,7 @@
 			files = (
 				CFF5B98327283E5E00381B07 /* Preview Assets.xcassets in Resources */,
 				CFF5B98027283E5E00381B07 /* Assets.xcassets in Resources */,
+				CF089FD427281E05005ABF95 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +300,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29A1DFD052C72E3688CAE6C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COBSCComp201P001-Eshan/Pods-COBSCComp201P001-Eshan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COBSCComp201P001-Eshan/Pods-COBSCComp201P001-Eshan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-COBSCComp201P001-Eshan/Pods-COBSCComp201P001-Eshan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EEAE27C7BD61425695DE198 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COBSCComp201P001-Eshan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F76F3FD2AFCADC1C463A58B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2D29406B984CAE7CDA9F51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COBSCComp201P001-EshanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4F06A0836365DF2CF5EC938 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFF5B97427283E5C00381B07 /* Sources */ = {
@@ -413,6 +565,7 @@
 		};
 		CFF5B99D27283E5E00381B07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE9B431402B642E96930608 /* Pods-COBSCComp201P001-Eshan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -434,7 +587,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nibm.lk.COBSCComp201P001-Eshan";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NIBM Parking";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,6 +596,7 @@
 		};
 		CFF5B99E27283E5E00381B07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB59BCAC8C731A36DBF95A0 /* Pods-COBSCComp201P001-Eshan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,7 +618,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nibm.lk.COBSCComp201P001-Eshan";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NIBM Parking";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,6 +627,7 @@
 		};
 		CFF5B9A027283E5E00381B07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F29331758EF17F216F4237C /* Pods-COBSCComp201P001-EshanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +653,7 @@
 		};
 		CFF5B9A127283E5E00381B07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82A04A7D9C4AE4F6A1B17044 /* Pods-COBSCComp201P001-EshanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +679,7 @@
 		};
 		CFF5B9A327283E5E00381B07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC69B644A47A4B8ABB4C1C69 /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +703,7 @@
 		};
 		CFF5B9A427283E5E00381B07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0787AE2EB1740CF1A53B93A /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
