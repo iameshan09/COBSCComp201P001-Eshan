@@ -11,6 +11,9 @@
 		3F7A78024DC9A04783EF2F12 /* Pods_COBSCComp201P001_EshanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532BADE0715F82874672BBC /* Pods_COBSCComp201P001_EshanTests.framework */; };
 		BEFD61ADEBDE4ECBC88A78B6 /* Pods_COBSCComp201P001_Eshan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F74A3840B8432DF14A103 /* Pods_COBSCComp201P001_Eshan.framework */; };
 		CF089FD427281E05005ABF95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF089FD327281E05005ABF95 /* GoogleService-Info.plist */; };
+		CF7D7C3F272C5F2900C75EE2 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C3E272C5F2900C75EE2 /* Home.swift */; };
+		CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C41272C76EB00C75EE2 /* Slot.swift */; };
+		CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */; };
 		CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */; };
 		CFF5B97E27283E5C00381B07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97D27283E5C00381B07 /* ContentView.swift */; };
 		CFF5B98027283E5E00381B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF5B97F27283E5E00381B07 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		CC69B644A47A4B8ABB4C1C69 /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCE9B431402B642E96930608 /* Pods-COBSCComp201P001-Eshan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan.debug.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan/Pods-COBSCComp201P001-Eshan.debug.xcconfig"; sourceTree = "<group>"; };
 		CF089FD327281E05005ABF95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF7D7C3E272C5F2900C75EE2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CF7D7C41272C76EB00C75EE2 /* Slot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
+		CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsViewModel.swift; sourceTree = "<group>"; };
 		CFA8653C2729BA4800CE2CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CFF5B97827283E5C00381B07 /* NIBM Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COBSCComp201P001_EshanApp.swift; sourceTree = "<group>"; };
@@ -99,6 +105,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF7D7C40272C769300C75EE2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CF7D7C41272C76EB00C75EE2 /* Slot.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		CF7D7C43272C787B00C75EE2 /* view_models */ = {
+			isa = PBXGroup;
+			children = (
+				CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */,
+			);
+			path = view_models;
+			sourceTree = "<group>";
+		};
 		CFF5B96F27283E5C00381B07 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +146,8 @@
 		CFF5B97A27283E5C00381B07 /* COBSCComp201P001-Eshan */ = {
 			isa = PBXGroup;
 			children = (
+				CF7D7C43272C787B00C75EE2 /* view_models */,
+				CF7D7C40272C769300C75EE2 /* models */,
 				CFA8653C2729BA4800CE2CB3 /* Info.plist */,
 				CFFA6CB727299F6F00FFA739 /* views */,
 				CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */,
@@ -163,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF5B97D27283E5C00381B07 /* ContentView.swift */,
+				CF7D7C3E272C5F2900C75EE2 /* Home.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -420,7 +445,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF5B97E27283E5C00381B07 /* ContentView.swift in Sources */,
+				CF7D7C3F272C5F2900C75EE2 /* Home.swift in Sources */,
 				CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */,
+				CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */,
+				CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

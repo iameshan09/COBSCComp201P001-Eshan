@@ -8,6 +8,9 @@ target 'COBSCComp201P001-Eshan' do
   # Pods for COBSCComp201P001-Eshan
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
+  pod ‘Firebase/Core'
+  pod ‘Firebase/Firestore'
+  pod ‘Firebase/Auth'
 
   target 'COBSCComp201P001-EshanTests' do
     inherit! :search_paths
