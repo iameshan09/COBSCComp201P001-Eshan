@@ -10,16 +10,29 @@ import SwiftUI
 struct Home: View {
     
     @ObservedObject private var viewModel = SlotsViewModel()
+    
+    let gItem=[GridItem(.adaptive(minimum:100))]
     var body: some View {
-        NavigationView{
-            List(viewModel.slots) { slot in
-                VStack(alignment: .leading)
-                {
+//        NavigationView{
+//            List(viewModel.slots) { slot in
+//                VStack(alignment: .leading)
+//                {
+//                    Text(String(slot.number))
+//                }
+//            }.onAppear(){
+//                self.viewModel.fetchData()
+//            }
+//        }
+        
+        ScrollView{
+            LazyVGrid(columns: gItem, content: {
+                ForEach(viewModel.slots){ slot in
                     Text(String(slot.number))
+                }.onAppear(){
+                    self.viewModel.fetchData()
                 }
-            }.onAppear(){
-                self.viewModel.fetchData()
-            }
+            })
+            
         }
     }
 }
