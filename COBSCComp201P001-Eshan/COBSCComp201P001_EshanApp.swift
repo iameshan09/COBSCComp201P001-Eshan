@@ -18,7 +18,8 @@ struct COBSCComp201P001_EshanApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let viewModel = AuthViewModel()
+            ContentView().environmentObject(viewModel)
         }
     }
 }

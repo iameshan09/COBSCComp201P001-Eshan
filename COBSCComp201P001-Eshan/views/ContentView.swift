@@ -8,9 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    //@StateObject var viewModel = AuthViewModel()
+    
     var body: some View {
-        TabView(){
+        
+        TabView{
             Home().tabItem{Image(systemName:"house" )}
+            
+            NavigationView{
+                if viewModel.signedIn{
+                    Booking().navigationTitle("Booking")
+                }
+                else
+                {
+                    SignIn()
+                }
+            }.onAppear{
+                viewModel.signedIn = viewModel.isSignedIn
+            }.tabItem{
+                Image(systemName:"parkingsign.circle" )
+            }
+            
+            NavigationView{
+                if viewModel.signedIn{
+                    Settings().navigationTitle("Settings")
+                }
+                else
+                {
+                    SignIn()
+                }
+            }.onAppear{
+                viewModel.signedIn = viewModel.isSignedIn
+            }.tabItem{
+                Image(systemName:"gear.circle" )
+            }
         }
     }
 }

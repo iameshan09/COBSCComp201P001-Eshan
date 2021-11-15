@@ -11,9 +11,15 @@
 		3F7A78024DC9A04783EF2F12 /* Pods_COBSCComp201P001_EshanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532BADE0715F82874672BBC /* Pods_COBSCComp201P001_EshanTests.framework */; };
 		BEFD61ADEBDE4ECBC88A78B6 /* Pods_COBSCComp201P001_Eshan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F74A3840B8432DF14A103 /* Pods_COBSCComp201P001_Eshan.framework */; };
 		CF089FD427281E05005ABF95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF089FD327281E05005ABF95 /* GoogleService-Info.plist */; };
+		CF2D3AA7273548EB00F9EFA9 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2D3AA6273548EB00F9EFA9 /* SignUp.swift */; };
+		CF448EC02734392300C26187 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF448EBF2734392300C26187 /* SignIn.swift */; };
+		CF448EC427343A5100C26187 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF448EC327343A5100C26187 /* User.swift */; };
+		CF448EC627343CD800C26187 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF448EC527343CD800C26187 /* AuthViewModel.swift */; };
+		CF448EC8273445B100C26187 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF448EC7273445B100C26187 /* Booking.swift */; };
 		CF7D7C3F272C5F2900C75EE2 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C3E272C5F2900C75EE2 /* Home.swift */; };
 		CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C41272C76EB00C75EE2 /* Slot.swift */; };
 		CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */; };
+		CFA2A6E32735572000F1E348 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A6E22735572000F1E348 /* Settings.swift */; };
 		CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */; };
 		CFF5B97E27283E5C00381B07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97D27283E5C00381B07 /* ContentView.swift */; };
 		CFF5B98027283E5E00381B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF5B97F27283E5E00381B07 /* Assets.xcassets */; };
@@ -50,9 +56,15 @@
 		CC69B644A47A4B8ABB4C1C69 /* Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests/Pods-COBSCComp201P001-Eshan-COBSCComp201P001-EshanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCE9B431402B642E96930608 /* Pods-COBSCComp201P001-Eshan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COBSCComp201P001-Eshan.debug.xcconfig"; path = "Target Support Files/Pods-COBSCComp201P001-Eshan/Pods-COBSCComp201P001-Eshan.debug.xcconfig"; sourceTree = "<group>"; };
 		CF089FD327281E05005ABF95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF2D3AA6273548EB00F9EFA9 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		CF448EBF2734392300C26187 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		CF448EC327343A5100C26187 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CF448EC527343CD800C26187 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CF448EC7273445B100C26187 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		CF7D7C3E272C5F2900C75EE2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CF7D7C41272C76EB00C75EE2 /* Slot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
 		CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsViewModel.swift; sourceTree = "<group>"; };
+		CFA2A6E22735572000F1E348 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		CFA8653C2729BA4800CE2CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CFF5B97827283E5C00381B07 /* NIBM Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COBSCComp201P001_EshanApp.swift; sourceTree = "<group>"; };
@@ -109,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CF7D7C41272C76EB00C75EE2 /* Slot.swift */,
+				CF448EC327343A5100C26187 /* User.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -117,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */,
+				CF448EC527343CD800C26187 /* AuthViewModel.swift */,
 			);
 			path = view_models;
 			sourceTree = "<group>";
@@ -188,6 +202,10 @@
 			children = (
 				CFF5B97D27283E5C00381B07 /* ContentView.swift */,
 				CF7D7C3E272C5F2900C75EE2 /* Home.swift */,
+				CF448EBF2734392300C26187 /* SignIn.swift */,
+				CF448EC7273445B100C26187 /* Booking.swift */,
+				CF2D3AA6273548EB00F9EFA9 /* SignUp.swift */,
+				CFA2A6E22735572000F1E348 /* Settings.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -445,10 +463,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF5B97E27283E5C00381B07 /* ContentView.swift in Sources */,
+				CF448EC02734392300C26187 /* SignIn.swift in Sources */,
+				CF2D3AA7273548EB00F9EFA9 /* SignUp.swift in Sources */,
 				CF7D7C3F272C5F2900C75EE2 /* Home.swift in Sources */,
+				CF448EC427343A5100C26187 /* User.swift in Sources */,
+				CFA2A6E32735572000F1E348 /* Settings.swift in Sources */,
 				CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */,
 				CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */,
 				CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */,
+				CF448EC627343CD800C26187 /* AuthViewModel.swift in Sources */,
+				CF448EC8273445B100C26187 /* Booking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +642,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,7 +673,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
