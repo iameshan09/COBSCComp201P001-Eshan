@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct Booking: View {
+    @Binding var tabSelection: Int
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct Booking_Previews: PreviewProvider {
-    static var previews: some View {
-        Booking()
-    }
-}
+

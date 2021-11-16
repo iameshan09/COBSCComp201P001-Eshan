@@ -10,26 +10,25 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
-    //@StateObject var viewModel = AuthViewModel()
+    @State private var tabSelection = 1
     
     var body: some View {
         
-        TabView{
-            Home().tabItem{Image(systemName:"house" )}
-            
+        TabView (selection: $tabSelection) {
+            Home(tabSelection: $tabSelection).tabItem{Image(systemName:"house" )}.tag(1)
             NavigationView{
                 if viewModel.signedIn{
-                    Booking().navigationTitle("Booking")
+                    Booking(tabSelection: $tabSelection).navigationTitle("Booking")
                 }
                 else
                 {
-                    SignIn()
+                    SignIn(tabSelection: $tabSelection)
                 }
             }.onAppear{
                 viewModel.signedIn = viewModel.isSignedIn
             }.tabItem{
                 Image(systemName:"parkingsign.circle" )
-            }
+            }.tag(2)
             
             NavigationView{
                 if viewModel.signedIn{
@@ -37,13 +36,13 @@ struct ContentView: View {
                 }
                 else
                 {
-                    SignIn()
+                    SignIn(tabSelection: $tabSelection)
                 }
             }.onAppear{
                 viewModel.signedIn = viewModel.isSignedIn
             }.tabItem{
                 Image(systemName:"gear.circle" )
-            }
+            }.tag(3)
         }
     }
 }

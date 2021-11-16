@@ -23,10 +23,10 @@ class SlotsViewModel : ObservableObject {
             self.slots = documents.map { (queryDocumentSnapshot) -> Slot in
                 let data = queryDocumentSnapshot.data()
                 
-                let number = data["number"] as? Int ?? 0
+                let number = data["number"] as? String ?? ""
                 let isVIP = data["isVIP"] as? Bool ?? false
                 let isBooked = data["isBooked"]as?  Bool ?? false
-                let bookedTime = data["bookedTime"]as?  Date ?? Date()
+                let bookedTime = data["bookedTime"]as?  String ?? ""
                 let bookedUser = data["bookedUser"]as? String ?? ""
                 
                 return Slot(number: number, isVIP: isVIP, isBooked: isBooked, bookedTime: bookedTime, bookedUSer: bookedUser)

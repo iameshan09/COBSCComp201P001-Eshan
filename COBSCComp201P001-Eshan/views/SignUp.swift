@@ -16,8 +16,9 @@ struct SignUp: View {
             
               Spacer()
               Form {
-               
-                        TextField("Email", text: $viewModel.newUser.email)
+                  
+                  ScrollView{
+                      TextField("Email", text: $viewModel.newUser.email)
                       if(viewModel.emailErrorStatus){ Text(viewModel.emailError).foregroundColor(.red)}
                       
                       SecureField("Password", text: $viewModel.newUser.password)
@@ -31,9 +32,9 @@ struct SignUp: View {
                       
                       TextField("Vehicle No", text: $viewModel.newUser.vno)
                       if(viewModel.vnoErrorStatus){ Text(viewModel.vnoError).foregroundColor(.red)}
-                  
-                  
-                  
+                  }
+               
+                    
                   
               }
             
@@ -48,19 +49,6 @@ struct SignUp: View {
              Spacer()
         }.navigationTitle("Create Account").background(Color.white)
     }
-    func handleCancelTapped() {
-        dismiss()
-      }
-      
-      func handleDoneTapped() {
-        //self.viewModel.handleDoneTapped()
-        viewModel.signUPValidations()
-        //dismiss()
-      }
-      
-      func dismiss() {
-        //self.presentationMode.wrappedValue.dismiss()
-      }
 }
 
 struct SignUp_Previews: PreviewProvider {

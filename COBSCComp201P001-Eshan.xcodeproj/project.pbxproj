@@ -20,6 +20,7 @@
 		CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C41272C76EB00C75EE2 /* Slot.swift */; };
 		CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */; };
 		CFA2A6E32735572000F1E348 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A6E22735572000F1E348 /* Settings.swift */; };
+		CFE110762743E85900B6B527 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE110752743E85900B6B527 /* SlotView.swift */; };
 		CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */; };
 		CFF5B97E27283E5C00381B07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97D27283E5C00381B07 /* ContentView.swift */; };
 		CFF5B98027283E5E00381B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF5B97F27283E5E00381B07 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsViewModel.swift; sourceTree = "<group>"; };
 		CFA2A6E22735572000F1E348 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		CFA8653C2729BA4800CE2CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CFE110752743E85900B6B527 /* SlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		CFF5B97827283E5C00381B07 /* NIBM Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COBSCComp201P001_EshanApp.swift; sourceTree = "<group>"; };
 		CFF5B97D27283E5C00381B07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,13 @@
 			path = view_models;
 			sourceTree = "<group>";
 		};
+		CFE110772744065D00B6B527 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CFF5B96F27283E5C00381B07 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +169,7 @@
 		CFF5B97A27283E5C00381B07 /* COBSCComp201P001-Eshan */ = {
 			isa = PBXGroup;
 			children = (
+				CFE110772744065D00B6B527 /* Extensions */,
 				CF7D7C43272C787B00C75EE2 /* view_models */,
 				CF7D7C40272C769300C75EE2 /* models */,
 				CFA8653C2729BA4800CE2CB3 /* Info.plist */,
@@ -206,6 +216,7 @@
 				CF448EC7273445B100C26187 /* Booking.swift */,
 				CF2D3AA6273548EB00F9EFA9 /* SignUp.swift */,
 				CFA2A6E22735572000F1E348 /* Settings.swift */,
+				CFE110752743E85900B6B527 /* SlotView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -472,6 +483,7 @@
 				CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */,
 				CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */,
 				CF448EC627343CD800C26187 /* AuthViewModel.swift in Sources */,
+				CFE110762743E85900B6B527 /* SlotView.swift in Sources */,
 				CF448EC8273445B100C26187 /* Booking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

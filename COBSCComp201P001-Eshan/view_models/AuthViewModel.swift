@@ -12,9 +12,9 @@ import FirebaseFirestore
 class AuthViewModel: ObservableObject{
     
     let auth = Auth.auth()
-//    var ref = Database.database().reference()
     private var db = Firestore.firestore()
     @Published var newUser: User = User(email:"", password: "", name:"", nic:"", vno: "")
+    @Published var currentUser: User = User(email:"", password: "", name:"", nic:"", vno: "")
     
     @Published var users = [User]()
 
@@ -25,15 +25,16 @@ class AuthViewModel: ObservableObject{
     @Published var nameErrorStatus = false
     @Published var nicErrorStatus = false
     @Published var vnoErrorStatus = false
+    @Published var loginErrorStatus = false
     
     @Published var emailError = ""
     @Published var passwordError = ""
     @Published var nameError = ""
     @Published var nicError = ""
     @Published var vnoError = ""
+    @Published var loginError = ""
     
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-    @Published var i = 0
         
     
     var isSignedIn: Bool{
@@ -43,11 +44,17 @@ class AuthViewModel: ObservableObject{
     func signIn(){
         auth.signIn(withEmail: newUser.email, password: newUser.password) {[weak self]result,error in
             guard result != nil, error == nil else {
+                self?.loginErrorStatus = true
+                self?.loginError = error?.localizedDescription ?? ""
                return
             }
                        
             DispatchQueue.main.async {
                 // success
+                self?.loginErrorStatus = false
+                self?.loginError = ""
+                self?.newUser.email = ""
+                self?.newUser.password = ""
                 self?.signedIn = true
             }
             
@@ -79,6 +86,11 @@ class AuthViewModel: ObservableObject{
                     let record = self?.db.collection("users").document(uid)
                     record?.setData(authenticatedUser)
                 }
+                self?.newUser.email = ""
+                self?.newUser.password = ""
+                self?.newUser.name = ""
+                self?.newUser.nic = ""
+                self?.newUser.vno = ""
                 self?.signedIn = true
                 
             }
@@ -91,10 +103,10 @@ class AuthViewModel: ObservableObject{
         self.signedIn = false
     }
     
-//    func getUserData(){
-//        
-//        let uId = Auth.auth().currentUser?.uid
-//             
+    func loadCurrentUser() {
+        
+        let uId = Auth.auth().currentUser?.uid ?? ""
+             
 //        database.collection("users").whereField("uid",isEqualTo: uId ?? "").addSnapshotListener { (querySnapshot, error) in
 //            guard let documents = querySnapshot?.documents else {
 //                print("No documents")
@@ -112,14 +124,26 @@ class AuthViewModel: ObservableObject{
 //
 //            }
 //        }
-//    }
+        db.collection("users").document(uId).getDocument{ snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+            self.currentUser.email = data["email"] as? String ?? ""
+            self.currentUser.password = data["password"] as? String ?? ""
+            self.currentUser.name = data["name"] as? String ?? ""
+            self.currentUser.nic = data["nic"] as? String ?? ""
+            self.currentUser.vno = data["vno"] as? String ?? ""
+            
+            
+        }
+    }
     
     func signUPValidations()
     {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", self.emailRegEx)
         let semaPhore = DispatchSemaphore(value: 0)
         let dispatchQueue = DispatchQueue.global(qos: .userInitiated)
-        i=0
+        var i=0
         
         DispatchQueue.main.async{
             self.emailErrorStatus = false
@@ -148,8 +172,7 @@ class AuthViewModel: ObservableObject{
                         {
                             self.emailErrorStatus = true
                             self.emailError = "Email is already exists"
-                            self.i += 1
-                            print(self.i)
+                            i += 1
                         }
                         
                     }
@@ -171,7 +194,7 @@ class AuthViewModel: ObservableObject{
                         {
                             self.nicErrorStatus = true
                             self.nicError = "NIC is already exists"
-                            self.i += 1
+                            i += 1
                         }
                        
                     }
@@ -192,7 +215,7 @@ class AuthViewModel: ObservableObject{
                         {
                             self.vnoErrorStatus = true
                             self.vnoError = "Vehicle no is already exists"
-                            self.i += 1
+                            i += 1
                         }
                        
                     }
@@ -210,7 +233,7 @@ class AuthViewModel: ObservableObject{
                 }
               
                 
-                self.i += 1
+                i += 1
             }
             if(!self.newUser.email.isEmpty && !emailPred.evaluate(with: self.newUser.email))
             {
@@ -219,7 +242,7 @@ class AuthViewModel: ObservableObject{
                     self.emailError = "Not a valid email"
                 }
                
-                self.i += 1
+                i += 1
             }
             if(self.newUser.password.isEmpty)
             {
@@ -230,7 +253,7 @@ class AuthViewModel: ObservableObject{
                 }
               
                 
-                self.i += 1
+                i += 1
             }
             if(!self.newUser.password.isEmpty && self.newUser.password.count<8)
             {
@@ -241,7 +264,7 @@ class AuthViewModel: ObservableObject{
                 }
               
                 
-                self.i += 1
+                i += 1
             }
             if(self.newUser.name.isEmpty)
             {
@@ -252,7 +275,7 @@ class AuthViewModel: ObservableObject{
                 }
               
                 
-                self.i += 1
+                i += 1
             }
             if(self.newUser.nic.isEmpty)
             {
@@ -263,7 +286,7 @@ class AuthViewModel: ObservableObject{
                 }
               
                 
-                self.i += 1
+                i += 1
             }
             if(self.newUser.vno.isEmpty)
             {
@@ -274,9 +297,9 @@ class AuthViewModel: ObservableObject{
                 }
               
                 
-                self.i += 1
+                i += 1
             }
-            if(self.i<1)
+            if(i<1)
             {
               self.signUp()
             }
