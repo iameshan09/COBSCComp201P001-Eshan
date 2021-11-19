@@ -10,7 +10,6 @@ import FirebaseFirestore
 
 class SlotsViewModel : ObservableObject {
     @Published var slots = [Slot]()
-    
     private var db = Firestore.firestore()
     
     func fetchData(){
@@ -22,15 +21,21 @@ class SlotsViewModel : ObservableObject {
             
             self.slots = documents.map { (queryDocumentSnapshot) -> Slot in
                 let data = queryDocumentSnapshot.data()
+                let id = queryDocumentSnapshot.documentID
                 
                 let number = data["number"] as? String ?? ""
                 let isVIP = data["isVIP"] as? Bool ?? false
-                let isBooked = data["isBooked"]as?  Bool ?? false
+                let isAvailable = data["isAvailable"]as?  Bool ?? false
                 let bookedTime = data["bookedTime"]as?  String ?? ""
                 let bookedUser = data["bookedUser"]as? String ?? ""
+                let bookedVehicle = data["bookedVehicle"]as? String ?? ""
                 
-                return Slot(number: number, isVIP: isVIP, isBooked: isBooked, bookedTime: bookedTime, bookedUSer: bookedUser)
+            
+                return Slot(id:id, number: number, isVIP: isVIP, isAvailable: isAvailable, bookedTime: bookedTime, bookedUSer: bookedUser, bookedVehicle: bookedVehicle)
             }
         }
+      
     }
+   
+    
 }

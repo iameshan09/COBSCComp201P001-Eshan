@@ -20,6 +20,7 @@
 		CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C41272C76EB00C75EE2 /* Slot.swift */; };
 		CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */; };
 		CFA2A6E32735572000F1E348 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A6E22735572000F1E348 /* Settings.swift */; };
+		CFD3F34827452F8000EF6308 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3F34727452F8000EF6308 /* BookingViewModel.swift */; };
 		CFE110762743E85900B6B527 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE110752743E85900B6B527 /* SlotView.swift */; };
 		CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */; };
 		CFF5B97E27283E5C00381B07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97D27283E5C00381B07 /* ContentView.swift */; };
@@ -67,6 +68,7 @@
 		CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsViewModel.swift; sourceTree = "<group>"; };
 		CFA2A6E22735572000F1E348 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		CFA8653C2729BA4800CE2CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CFD3F34727452F8000EF6308 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		CFE110752743E85900B6B527 /* SlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
 		CFF5B97827283E5C00381B07 /* NIBM Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COBSCComp201P001_EshanApp.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */,
 				CF448EC527343CD800C26187 /* AuthViewModel.swift */,
+				CFD3F34727452F8000EF6308 /* BookingViewModel.swift */,
 			);
 			path = view_models;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				CF448EC02734392300C26187 /* SignIn.swift in Sources */,
 				CF2D3AA7273548EB00F9EFA9 /* SignUp.swift in Sources */,
 				CF7D7C3F272C5F2900C75EE2 /* Home.swift in Sources */,
+				CFD3F34827452F8000EF6308 /* BookingViewModel.swift in Sources */,
 				CF448EC427343A5100C26187 /* User.swift in Sources */,
 				CFA2A6E32735572000F1E348 /* Settings.swift in Sources */,
 				CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */,
@@ -572,13 +576,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -627,12 +632,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -654,7 +660,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -685,7 +691,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

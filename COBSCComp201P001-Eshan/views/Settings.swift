@@ -14,9 +14,10 @@ struct Settings: View {
     var body: some View {
         VStack{
            Form {
-                   TextField("Email", text: $viewModel.currentUser.email).disabled(true)
+                   
                    TextField("Name", text: $viewModel.currentUser.name).disabled(true)
                    TextField("NIC", text: $viewModel.currentUser.nic).disabled(true)
+                   TextField("Registration No", text: $viewModel.currentUser.regno).disabled(true)
                    TextField("Vehicle No", text: $viewModel.currentUser.vno).disabled(true)
               
                HStack{

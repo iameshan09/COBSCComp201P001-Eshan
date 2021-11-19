@@ -8,10 +8,13 @@
 import Foundation
 
 struct Slot : Identifiable{
-    var id: String = UUID().uuidString
+    
+    var id: String 
     var number: String
     var isVIP: Bool
-    var isBooked: Bool
+    var isAvailable: Bool
     var bookedTime: String
     var bookedUSer: String
+    var bookedVehicle: String
 }
+

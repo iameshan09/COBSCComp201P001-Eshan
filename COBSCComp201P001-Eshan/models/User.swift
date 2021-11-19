@@ -17,10 +17,12 @@ import Foundation
 //}
 
 struct User : Identifiable{
+    
     var id: String = UUID().uuidString
     var email: String
     var password: String
     var name: String
     var nic: String
-    var vno: String
+    var regno: String
+    var vno: String 
 }

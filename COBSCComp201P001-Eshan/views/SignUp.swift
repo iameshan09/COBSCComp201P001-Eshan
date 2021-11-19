@@ -14,29 +14,36 @@ struct SignUp: View {
     var body: some View {
         VStack{
             
-              Spacer()
-              Form {
-                  
-                  ScrollView{
-                      TextField("Email", text: $viewModel.newUser.email)
-                      if(viewModel.emailErrorStatus){ Text(viewModel.emailError).foregroundColor(.red)}
-                      
-                      SecureField("Password", text: $viewModel.newUser.password)
-                      if(viewModel.passwordErrorStatus){ Text(viewModel.passwordError).foregroundColor(.red)}
-                      
-                      TextField("Name", text: $viewModel.newUser.name)
-                      if(viewModel.nameErrorStatus){ Text(viewModel.nameError).foregroundColor(.red)}
-                      
-                      TextField("NIC", text: $viewModel.newUser.nic)
-                      if(viewModel.nicErrorStatus){ Text(viewModel.nicError).foregroundColor(.red) }
-                      
-                      TextField("Vehicle No", text: $viewModel.newUser.vno)
-                      if(viewModel.vnoErrorStatus){ Text(viewModel.vnoError).foregroundColor(.red)}
-                  }
-               
-                    
-                  
-              }
+            Spacer()
+            Form {
+                
+                ScrollView{
+                    Group{
+                        
+                        TextField("Email", text: $viewModel.newUser.email)
+                        Text(viewModel.emailError).foregroundColor(.red)
+
+                        SecureField("Password", text: $viewModel.newUser.password)
+                        Text(viewModel.passwordError).foregroundColor(.red)
+                    }
+                        
+                    Group{
+                        TextField("Name", text: $viewModel.newUser.name)
+                        Text(viewModel.nameError).foregroundColor(.red)
+                        
+                        TextField("NIC", text: $viewModel.newUser.nic)
+                        Text(viewModel.nicError).foregroundColor(.red)
+
+                        TextField("Registration No", text: $viewModel.newUser.regno)
+                        Text(viewModel.regnoError).foregroundColor(.red)
+
+                        TextField("Vehicle No", text: $viewModel.newUser.vno)
+                        Text(viewModel.vnoError).foregroundColor(.red)
+                    }
+
+                }
+                
+            }
             
             HStack{
                 Spacer()
@@ -46,7 +53,7 @@ struct SignUp: View {
                     .cornerRadius(8)
                 Spacer()
             }.padding()
-             Spacer()
+            Spacer()
         }.navigationTitle("Create Account").background(Color.white)
     }
 }

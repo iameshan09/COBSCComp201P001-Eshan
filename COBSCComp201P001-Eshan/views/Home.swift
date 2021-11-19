@@ -11,37 +11,34 @@ struct Home: View {
     
     @ObservedObject private var viewModel = SlotsViewModel()
     @Binding var tabSelection: Int
+    @Binding var selectedSlot: String
     
-    let gItem=[GridItem(.adaptive(minimum: 75, maximum: 75))]
+    let gItem=[GridItem(.adaptive(minimum: 75, maximum: 150))]
    
     
     var body: some View {
         NavigationView{
-            ScrollView(.vertical, showsIndicators: false){
-                LazyVGrid(columns: gItem, content: {
-                    ForEach(viewModel.slots){ slot in
-//                        Button(String(slot.number)) {
-//                            self.tabSelection = 2
-//                        }.padding(20).background(slot.isVIP ? Color.orange : Color.green).frame(width: 75, height: 75, alignment: .center)
-//                        Rectangle()
-//                                      .fill(slot.isVIP ? Color.orange : Color.green)
-//                                      .frame(width: 75, height: 75)
-                        
-                        SlotView(backgroundColor: slot.isVIP ? Color.orange : Color.green, slotNumber: String(slot.number), function: {self.tabSelection = 2})
-                     
-                       
-                    }
-                }).onAppear(){
-                    self.viewModel.fetchData()
-                }
-                
-            }
-    }
-       
+            VStack(alignment:.leading){
+                ScrollView(.vertical, showsIndicators: false){
+                    LazyHGrid(rows: gItem,alignment: .top, content: {
+                        ForEach(viewModel.slots){ slot in
 
-           
+                            SlotView(backgroundColor: slot.isVIP ? Color.orange : Color.green, slotNumber: String(slot.number), function: {self.selectedSlot = slot.id; self.tabSelection = 2}, opacity: slot.isAvailable ? 1.0 : 0.3, isDisabled: slot.isAvailable ? false : true, bVehicle: slot.bookedVehicle)
+                            
+                           
+                        }
+                       
+                
+                        
+                    })
+                    
+                }
+            }
+          
+    }.onAppear(){
+        self.viewModel.fetchData()
         
-        
+    }
     }
 }
 

@@ -15,15 +15,22 @@ struct SlotView: View {
     var backgroundColor = Color.green
     var slotNumber: String
     var function:()-> Void
-
+    var opacity = 1.0
+    var isDisabled = false
+    var bVehicle: String
+    
     var body: some View {
-        Button(action:{self.function()})
-        {
-            ZStack{
-                Rectangle().fill(backgroundColor).frame(width: 75, height: 75)
-                Text(slotNumber)
-            }
+        VStack{
+            Button(action:{self.function()})
+            {
+                ZStack{
+                    Rectangle().fill(backgroundColor).frame(width: 75, height: 75).opacity(1.0)
+                    Text(slotNumber)
+                }
+            }.disabled(isDisabled)
+            Text(bVehicle)
         }
+       
        
     }
 }

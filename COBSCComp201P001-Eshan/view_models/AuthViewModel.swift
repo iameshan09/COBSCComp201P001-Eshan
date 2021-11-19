@@ -13,8 +13,8 @@ class AuthViewModel: ObservableObject{
     
     let auth = Auth.auth()
     private var db = Firestore.firestore()
-    @Published var newUser: User = User(email:"", password: "", name:"", nic:"", vno: "")
-    @Published var currentUser: User = User(email:"", password: "", name:"", nic:"", vno: "")
+    @Published var newUser: User = User(email:"", password: "", name:"", nic:"",regno: "", vno: "")
+    @Published var currentUser: User = User(email:"", password: "", name:"", nic:"",regno: "", vno: "")
     
     @Published var users = [User]()
 
@@ -24,6 +24,7 @@ class AuthViewModel: ObservableObject{
     @Published var passwordErrorStatus = false
     @Published var nameErrorStatus = false
     @Published var nicErrorStatus = false
+    @Published var regnoErrorStatus = false
     @Published var vnoErrorStatus = false
     @Published var loginErrorStatus = false
     
@@ -31,7 +32,9 @@ class AuthViewModel: ObservableObject{
     @Published var passwordError = ""
     @Published var nameError = ""
     @Published var nicError = ""
+    @Published var regnoError = ""
     @Published var vnoError = ""
+    
     @Published var loginError = ""
     
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -80,6 +83,7 @@ class AuthViewModel: ObservableObject{
                         "password": self?.newUser.password ?? "",
                         "name": self?.newUser.name ?? "",
                         "nic":self?.newUser.nic ?? "",
+                        "regno":self?.newUser.regno ?? "",
                         "vno": self?.newUser.vno ?? ""
                     ]
                     
@@ -90,6 +94,7 @@ class AuthViewModel: ObservableObject{
                 self?.newUser.password = ""
                 self?.newUser.name = ""
                 self?.newUser.nic = ""
+                self?.newUser.regno = ""
                 self?.newUser.vno = ""
                 self?.signedIn = true
                 
@@ -128,10 +133,12 @@ class AuthViewModel: ObservableObject{
             guard let data = snapshot?.data(), error == nil else {
                 return
             }
+            self.currentUser.id =  snapshot?.documentID ?? ""
             self.currentUser.email = data["email"] as? String ?? ""
             self.currentUser.password = data["password"] as? String ?? ""
             self.currentUser.name = data["name"] as? String ?? ""
             self.currentUser.nic = data["nic"] as? String ?? ""
+            self.currentUser.regno = data["regno"] as? String ?? ""
             self.currentUser.vno = data["vno"] as? String ?? ""
             
             
@@ -150,11 +157,13 @@ class AuthViewModel: ObservableObject{
             self.passwordErrorStatus = false
             self.nameErrorStatus = false
             self.nicErrorStatus = false
+            self.regnoErrorStatus = false
             self.vnoErrorStatus = false
             self.emailError = ""
             self.passwordError = ""
             self.nameError = ""
             self.nicError = ""
+            self.regnoError = ""
             self.vnoError = ""
         }
         
@@ -203,6 +212,27 @@ class AuthViewModel: ObservableObject{
             }
             semaPhore.wait()
             
+            self.db.collection("users").whereField("regno", isEqualTo: self.newUser.regno).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let data=document.data()
+                        let regno = data["regno"] as? String ?? ""
+                        
+                        if(regno == self.newUser.regno)
+                        {
+                            self.regnoErrorStatus = true
+                            self.regnoError = "Registration no is already exists"
+                            i += 1
+                        }
+                       
+                    }
+                }
+                semaPhore.signal()
+            }
+            semaPhore.wait()
+            
             self.db.collection("users").whereField("vno", isEqualTo: self.newUser.vno).getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
@@ -223,6 +253,8 @@ class AuthViewModel: ObservableObject{
                 semaPhore.signal()
             }
             semaPhore.wait()
+            
+            
             
             if(self.newUser.email.isEmpty)
             {
@@ -283,6 +315,17 @@ class AuthViewModel: ObservableObject{
                 DispatchQueue.main.async {
                     self.nicErrorStatus = true
                     self.nicError = "NIC is required"
+                }
+              
+                
+                i += 1
+            }
+            if(self.newUser.regno.isEmpty)
+            {
+                
+                DispatchQueue.main.async {
+                    self.regnoErrorStatus = true
+                    self.regnoError = "Registration no is required"
                 }
               
                 
