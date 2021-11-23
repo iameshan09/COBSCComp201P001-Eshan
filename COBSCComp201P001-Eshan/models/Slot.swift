@@ -14,7 +14,7 @@ struct Slot : Identifiable{
     var isVIP: Bool
     var isAvailable: Bool
     var bookedTime: String
-    var bookedUSer: String
+    var bookedUser: String
     var bookedVehicle: String
 }
 

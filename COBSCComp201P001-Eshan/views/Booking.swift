@@ -79,6 +79,7 @@ struct Booking: View {
             
         }
     }
+
 }
 //struct Booking_Previews: PreviewProvider {
 //

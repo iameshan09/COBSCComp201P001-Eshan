@@ -8,13 +8,14 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import SwiftUI
 
 class AuthViewModel: ObservableObject{
     
     let auth = Auth.auth()
     private var db = Firestore.firestore()
-    @Published var newUser: User = User(email:"", password: "", name:"", nic:"",regno: "", vno: "")
-    @Published var currentUser: User = User(email:"", password: "", name:"", nic:"",regno: "", vno: "")
+    @Published var newUser: User = User(id:"", email:"", password: "", name:"", nic:"",regno: "", vno: "", bookedStatus: false)
+    @Published var currentUser: User = User(id:"", email:"", password: "", name:"", nic:"",regno: "", vno: "", bookedStatus: false)
     
     @Published var users = [User]()
 
@@ -84,7 +85,8 @@ class AuthViewModel: ObservableObject{
                         "name": self?.newUser.name ?? "",
                         "nic":self?.newUser.nic ?? "",
                         "regno":self?.newUser.regno ?? "",
-                        "vno": self?.newUser.vno ?? ""
+                        "vno": self?.newUser.vno ?? "",
+                        "bookedStatus": false
                     ]
                     
                     let record = self?.db.collection("users").document(uid)
@@ -109,40 +111,30 @@ class AuthViewModel: ObservableObject{
     }
     
     func loadCurrentUser() {
-        
-        let uId = Auth.auth().currentUser?.uid ?? ""
-             
-//        database.collection("users").whereField("uid",isEqualTo: uId ?? "").addSnapshotListener { (querySnapshot, error) in
-//            guard let documents = querySnapshot?.documents else {
-//                print("No documents")
-//                return
-//            }
-//
-//            self.users = documents.map { (queryDocumentSnapshot) -> User in
-//                let data = queryDocumentSnapshot.data()
-//                let uid = data["uid"] as? String ?? ""
-//                let name = data["uName"] as? String ?? ""
-//                let nic = data["uNic"] as? String ?? ""
-//                let vno = data["uVno"] as? String ?? ""
-//
-//                return User(id:uid, name: name, nic: nic, vno :vno)
-//
-//            }
-//        }
-        db.collection("users").document(uId).getDocument{ snapshot, error in
-            guard let data = snapshot?.data(), error == nil else {
-                return
-            }
-            self.currentUser.id =  snapshot?.documentID ?? ""
-            self.currentUser.email = data["email"] as? String ?? ""
-            self.currentUser.password = data["password"] as? String ?? ""
-            self.currentUser.name = data["name"] as? String ?? ""
-            self.currentUser.nic = data["nic"] as? String ?? ""
-            self.currentUser.regno = data["regno"] as? String ?? ""
-            self.currentUser.vno = data["vno"] as? String ?? ""
+     
+        if(self.isSignedIn){
             
-            
+                 let uId = auth.currentUser?.uid ?? ""
+                 db.collection("users").document(uId).getDocument{ snapshot, error in
+                     guard let data = snapshot?.data(), error == nil else {
+                         return
+                     }
+                   
+                         self.currentUser.id =  snapshot?.documentID ?? ""
+                         self.currentUser.email = data["email"] as? String ?? ""
+                         self.currentUser.password = data["password"] as? String ?? ""
+                         self.currentUser.name = data["name"] as? String ?? ""
+                         self.currentUser.nic = data["nic"] as? String ?? ""
+                         self.currentUser.regno = data["regno"] as? String ?? ""
+                         self.currentUser.vno = data["vno"] as? String ?? ""
+                         self.currentUser.bookedStatus = data["bookedStatus"] as? Bool ?? false
+                 
+                 }
         }
+       
+        
+      
+
     }
     
     func signUPValidations()

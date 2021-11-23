@@ -16,21 +16,35 @@ class BookingViewModel : ObservableObject {
     
     
     func Booking(docId:String, buser:String, bvehicle:String){
+       
+    
         
-        
-        
-        db.collection("slots").document(docId).updateData([
-            "bookedTime": Date(),
-            "bookedUser": buser,
-            "bookedVehicle": bvehicle,
-            "isAvailable": false,
-           
-        ]) { err in
-            if let err = err {
-                print("Error updating document: \(err)")
-            } else {
-                print("Document successfully updated")
+     
+            self.db.collection("slots").document(docId).updateData([
+                "bookedTime": Date(),
+                "bookedUser": buser,
+                "bookedVehicle": bvehicle,
+                "isAvailable": false,
+               
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    self.db.collection("users").document(buser).updateData([
+                      
+                        "bookedStatus": true,
+                       
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+                }
             }
+        
         }
-    }
+        
+      
 }

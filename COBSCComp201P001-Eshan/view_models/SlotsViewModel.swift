@@ -31,7 +31,7 @@ class SlotsViewModel : ObservableObject {
                 let bookedVehicle = data["bookedVehicle"]as? String ?? ""
                 
             
-                return Slot(id:id, number: number, isVIP: isVIP, isAvailable: isAvailable, bookedTime: bookedTime, bookedUSer: bookedUser, bookedVehicle: bookedVehicle)
+                return Slot(id:id, number: number, isVIP: isVIP, isAvailable: isAvailable, bookedTime: bookedTime, bookedUser: bookedUser, bookedVehicle: bookedVehicle)
             }
         }
       
