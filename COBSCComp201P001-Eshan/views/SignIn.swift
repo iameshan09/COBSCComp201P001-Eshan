@@ -17,8 +17,9 @@ struct SignIn: View {
     }
     
     var body: some View {
-        
         VStack{
+            
+            Spacer()
             Form{
     
                     TextField("Email", text: $viewModel.newUser.email)
@@ -40,11 +41,12 @@ struct SignIn: View {
                 NavigationLink("Create Account", destination: SignUp()).padding().foregroundColor(.white)
                     .background(Color.green)
                     .cornerRadius(8)
+                Spacer()
             }
 
-        }.padding().navigationTitle("Sign In")
+        }.navigationTitle("Sign In").background(Color.white)
         
-        Spacer()
+       
         
     }
     
