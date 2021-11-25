@@ -20,6 +20,7 @@
 		CF7D7C42272C76EB00C75EE2 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C41272C76EB00C75EE2 /* Slot.swift */; };
 		CF7D7C45272C78D300C75EE2 /* SlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D7C44272C78D300C75EE2 /* SlotsViewModel.swift */; };
 		CFA2A6E32735572000F1E348 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2A6E22735572000F1E348 /* Settings.swift */; };
+		CFAD2859274F88BD008E2DAE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CFAD2858274F88BD008E2DAE /* CodeScanner */; };
 		CFD3F34827452F8000EF6308 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3F34727452F8000EF6308 /* BookingViewModel.swift */; };
 		CFE110762743E85900B6B527 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE110752743E85900B6B527 /* SlotView.swift */; };
 		CFF5B97C27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5B97B27283E5C00381B07 /* COBSCComp201P001_EshanApp.swift */; };
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAD2859274F88BD008E2DAE /* CodeScanner in Frameworks */,
 				BEFD61ADEBDE4ECBC88A78B6 /* Pods_COBSCComp201P001_Eshan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +257,9 @@
 			dependencies = (
 			);
 			name = "COBSCComp201P001-Eshan";
+			packageProductDependencies = (
+				CFAD2858274F88BD008E2DAE /* CodeScanner */,
+			);
 			productName = "COBSCComp201P001-Eshan";
 			productReference = CFF5B97827283E5C00381B07 /* NIBM Parking.app */;
 			productType = "com.apple.product-type.application";
@@ -330,6 +335,9 @@
 				Base,
 			);
 			mainGroup = CFF5B96F27283E5C00381B07;
+			packageReferences = (
+				CFAD2857274F88BD008E2DAE /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = CFF5B97927283E5C00381B07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -845,6 +853,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CFAD2857274F88BD008E2DAE /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CFAD2858274F88BD008E2DAE /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFAD2857274F88BD008E2DAE /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFF5B97027283E5C00381B07 /* Project object */;
 }

@@ -5,6 +5,7 @@
 //  Created by Eshan Gallage on 2021-11-04.
 //
 
+import CodeScanner
 import SwiftUI
 
 struct Booking: View {
@@ -13,6 +14,7 @@ struct Booking: View {
     @State private var slotsViewModel = SlotsViewModel()
     @EnvironmentObject var authViewModel: AuthViewModel
     @StateObject var bookViewModel = BookingViewModel()
+    @State private var isShowingScanner = false
     
     @Binding var selectedSlot: String
     
@@ -72,6 +74,22 @@ struct Booking: View {
                                 })
                             Spacer()
                         }.padding()
+                        
+                        HStack{
+                            Spacer()
+                            Button{
+                                self.isShowingScanner = true
+                            }label: {
+                                Label("Scan",systemImage: "qrcode.viewfinder")
+                            }.foregroundColor(.white)
+                                .padding()
+                                .background(Color.orange)
+                                .cornerRadius(8)
+                                .alert(isPresented: $bookViewModel.bookAlert, content:{
+                                    Alert(title: Text("Info"), message: Text(bookViewModel.bookAlertMsg), dismissButton:  .default(Text("Ok"), action:{self.tabSelection = 1} ))
+                                })
+                            Spacer()
+                        }.padding()
                     }
                     
                     
@@ -87,7 +105,21 @@ struct Booking: View {
             self.authViewModel.loadCurrentUser()
             self.slotsViewModel.fetchData()
             print("selected slot:", selectedSlot)
-            
+                
+        }
+        .sheet(isPresented: $isShowingScanner ){
+            CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com",completion: self.handleScan)
+        }
+    }
+    func handleScan (result: Result<String, CodeScannerView.ScanError>){
+        self.isShowingScanner = false
+        
+        switch result {
+        case.success(let code):
+            bookViewModel.Booking(docId: code, buser: authViewModel.currentUser.id, bvehicle: authViewModel.currentUser.vno)
+            print(code)
+        case.failure(let error):
+            print("scan failed",error)
         }
     }
 
