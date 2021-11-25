@@ -14,8 +14,8 @@ class AuthViewModel: ObservableObject{
     
     let auth = Auth.auth()
     private var db = Firestore.firestore()
-    @Published var newUser: User = User(id:"", email:"", password: "", name:"", nic:"",regno: "", vno: "", bookedStatus: false)
-    @Published var currentUser: User = User(id:"", email:"", password: "", name:"", nic:"",regno: "", vno: "", bookedStatus: false)
+    @Published var newUser: User = User(id:"", email:"", password: "", name:"", nic:"",regno: "", vno: "", bookedStatus: false, bookedSlot: "")
+    @Published var currentUser: User = User(id:"", email:"", password: "", name:"", nic:"",regno: "", vno: "", bookedStatus: false, bookedSlot: "")
     
     @Published var users = [User]()
 
@@ -86,7 +86,8 @@ class AuthViewModel: ObservableObject{
                         "nic":self?.newUser.nic ?? "",
                         "regno":self?.newUser.regno ?? "",
                         "vno": self?.newUser.vno ?? "",
-                        "bookedStatus": false
+                        "bookedStatus": false,
+                        "bookedSlot": ""
                     ]
                     
                     let record = self?.db.collection("users").document(uid)
@@ -128,6 +129,7 @@ class AuthViewModel: ObservableObject{
                          self.currentUser.regno = data["regno"] as? String ?? ""
                          self.currentUser.vno = data["vno"] as? String ?? ""
                          self.currentUser.bookedStatus = data["bookedStatus"] as? Bool ?? false
+                         self.currentUser.bookedSlot = data["bookedSlot"] as? String ?? ""
                  
                  }
         }

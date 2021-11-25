@@ -26,4 +26,5 @@ struct User : Identifiable{
     var regno: String
     var vno: String
     var bookedStatus: Bool
+    var bookedSlot: String
 }

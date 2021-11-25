@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct SlotView: View {
-//    var productName:String
-//    var calories:String
-//    var price:String
-//    var fontColor = Color.black
+
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @StateObject var bookViewModel = BookingViewModel()
+    
     var backgroundColor = Color.green
     var slotNumber: String
     var function:()-> Void
     var opacity = 1.0
     var isDisabled = false
     var bVehicle: String
+    var cancelBooking:()-> Void
+    
+    
     
     var body: some View {
         VStack{
@@ -28,7 +31,17 @@ struct SlotView: View {
                     Text(slotNumber)
                 }
             }.disabled(isDisabled)
-            Text(bVehicle)
+            if(authViewModel.isSignedIn && authViewModel.currentUser.bookedStatus)
+            {
+                Button("Cancel", action:  {self.cancelBooking()}).foregroundColor(.white)
+                    .padding()
+                    .background(Color.red)
+                    .cornerRadius(8)
+            }
+            else{
+                Text(bVehicle)
+            }
+           
         }
        
        

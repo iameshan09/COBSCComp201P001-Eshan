@@ -12,7 +12,7 @@ class SlotsViewModel : ObservableObject {
     @Published var slots = [Slot]()
     private var db = Firestore.firestore()
     
-    func fetchData(){
+    func fetchData() {
         db.collection("slots").order(by: "number").addSnapshotListener {(querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print ("empty")
@@ -36,6 +36,7 @@ class SlotsViewModel : ObservableObject {
         }
       
     }
+
    
     
 }
