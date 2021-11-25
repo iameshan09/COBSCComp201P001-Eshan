@@ -6,7 +6,9 @@
 //
 
 import XCTest
-@testable import COBSCComp201P001_Eshan
+
+@testable import COBSCComp201P001_EshanTests
+
 
 class COBSCComp201P001_EshanTests: XCTestCase {
 

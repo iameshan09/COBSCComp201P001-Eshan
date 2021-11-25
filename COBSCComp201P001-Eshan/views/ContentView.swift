@@ -21,7 +21,7 @@ struct ContentView: View {
 
             NavigationView{
                 if viewModel.signedIn{
-                    Booking(tabSelection: $tabSelection, selectedSlot: $selectedSlot).navigationTitle("Booking") 
+                    Booking(tabSelection: $tabSelection, selectedSlot: $selectedSlot).navigationTitle("Booking")
                 }
                 else
                 {

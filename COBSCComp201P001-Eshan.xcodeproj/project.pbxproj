@@ -662,6 +662,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"COBSCComp201P001-Eshan/Preview Content\"";
 				DEVELOPMENT_TEAM = 4VR7Z3J699;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "COBSCComp201P001-Eshan/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

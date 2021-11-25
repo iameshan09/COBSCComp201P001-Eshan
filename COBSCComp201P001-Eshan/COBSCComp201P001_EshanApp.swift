@@ -11,7 +11,7 @@ import Firebase
 
 @main
 struct COBSCComp201P001_EshanApp: App {
-   
+    
     // init firebase
         init() {
             FirebaseApp.configure()
@@ -19,6 +19,9 @@ struct COBSCComp201P001_EshanApp: App {
     
     var body: some Scene {
         let viewModel = AuthViewModel()
+        
+      
+        
         WindowGroup {
            
             ContentView().environmentObject(viewModel)
