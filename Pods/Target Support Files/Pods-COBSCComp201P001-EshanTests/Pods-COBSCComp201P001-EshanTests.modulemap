@@ -1,0 +1,6 @@
+framework module Pods_COBSCComp201P001_EshanTests {
+  umbrella header "Pods-COBSCComp201P001-EshanTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -24,7 +24,7 @@ struct Home: View {
                 ScrollView(.vertical, showsIndicators: false){
                     
                  
-                        LazyHGrid(rows: gItem,alignment: .top, content: {
+                    LazyVGrid(columns: gItem, content: {
                             ForEach(viewModel.slots){ slot in
                                 
                                 if(authViewModel.isSignedIn && authViewModel.currentUser.bookedStatus)
